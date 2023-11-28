@@ -1,0 +1,129 @@
+.home-background {
+    padding: 2vh;
+}
+
+.home-container {
+    height: 96vh;
+    width: 100%;
+}
+
+.home-hero {
+    height: 89vh;
+    padding: 2vh;
+}
+
+.home-hero .pages-col-7 {
+    padding-right: 2vh;
+}
+
+.hero-details {
+    height: 85vh;
+    padding-top: 15vh;
+}
+
+.hero-img {
+    height: 85vh;
+    padding: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-details h1 {
+    font-size: 5vh;
+    color: #fffffe;
+    text-transform: uppercase;
+    margin-bottom: 5vh;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.hero-details p {
+    font-size: 1.9vh;
+    color: #fffffe;
+    margin-bottom: 15vh;
+    font-weight: 200;
+    line-height: 3vh;
+    text-align: justify;
+}
+
+.button-holder {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button-holder button {
+    padding: 1vh 2vh;
+    font-size: 1.7vh;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+}
+
+
+
+.hb-one {
+    background-color: rgba(9, 64, 103, 0);
+    border: 1px solid #fffffe;
+    color: #fffffe;
+    transition: 1s;
+    margin-top: 1vh;
+
+}
+
+.hb-one:hover {
+    background-color: rgb(255, 255, 254);
+    border: 1px solid #000A2B;
+    color: #000A2B;
+    margin-top: 0;
+}
+
+.hb-two {
+    background-color: rgb(255, 255, 254);
+    border: 1px solid #00000000;
+    color: #000A2B;
+    transition: 1s;
+    margin-top: 1vh;
+}
+
+.hb-two:hover {
+    background-color: rgba(9, 64, 103, 0);
+    border: 1px solid #fffffe;
+    color: #fffffe;
+    margin-top: 0;
+}
+
+@media (max-width: 992px) {
+    .home-hero .pages-col-7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .home-hero .pages-col-5 {
+        display: none;
+    }
+}
+
+@media (max-width: 690px) {
+    .hero-details {
+        padding-top: 5vh;
+        padding-left: 0;
+        text-align: center;
+
+    }
+
+    .hero-details p {
+        margin-bottom: 10vh;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 500px) {
+    .button-holder a button {
+        text-align: center;
+        margin-bottom: 1vh;
+        width: 90%;
+    }
+
+    .button-holder a button.hb-one {
+        margin-right: 0;
+    }
+}

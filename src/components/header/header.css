@@ -1,0 +1,47 @@
+.navbar-holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5vh;
+    padding: 0 1vh;
+    margin-bottom: 2vh;
+}
+
+.navbar-holder a {
+    text-decoration: none;
+    font-size: 1.7vh;
+    color: #fffffe;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    transition: .5s;
+}
+
+.navbar-holder a:hover {
+    color: #3da9fc;
+}
+
+.navbar-holder h4 {
+    font-size: 2vh;
+    color: #fffffe;
+    font-family: 'Orbitron', sans-serif;
+    transition: .5s;
+}
+
+.navbar-holder h4:hover {
+    color: #3da9fc;
+}
+
+.hidden-logo {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .hidden-logo {
+        display: block;
+    }
+
+    .title-logo {
+        display: none;
+    }
+}

@@ -1,0 +1,14 @@
+.footer-holder {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 3vh;
+    width: 250px;
+}
+
+.footer-holder a {
+    text-decoration: none;
+    font-family: 'icons_social_media';
+    color: rgba(255, 255, 254, 0.8);
+    font-size: 4vh;
+}

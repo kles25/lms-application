@@ -1,0 +1,48 @@
+.tn-profile-pic {
+    height: 4vh;
+    width: 4vh;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.icon-dropdown.active {
+    display: block;
+}
+
+.icon-dropdown {
+    position: absolute;
+    width: 300px;
+    z-index: 10;
+    top: 5vh;
+    right: -1vw;
+    transition: 1s;
+    background-color: #fffffe;
+    border-radius: 1vh;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
+    height: 20vh;
+    padding: 2vh 1vw;
+    display: none;
+}
+
+.profile-links p {
+    font-size: 1.7vh;
+    color: #5f6c7b;
+
+
+}
+
+.profile-links {
+    align-items: center;
+    margin-bottom: 3.5vh;
+    display: flex;
+    transition: 1s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.profile-links svg {
+    margin-right: .5vw;
+    color: #5f6c7b;
+}

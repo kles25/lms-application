@@ -1,7 +1,5 @@
 .navbar-holder {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     height: 5vh;
     padding: 0 1vh;
     margin-bottom: 2vh;
@@ -18,7 +16,7 @@
 }
 
 .navbar-holder a:hover {
-    color: #3da9fc;
+    color: #000A2B;
 }
 
 .navbar-holder h4 {
@@ -29,12 +27,28 @@
 }
 
 .navbar-holder h4:hover {
-    color: #3da9fc;
+    color: #000A2B;
 }
 
 .hidden-logo {
     display: none;
 }
+
+.menu-nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu-nav p {
+    color: #fffffe;
+    font-size: 2vh;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+
+}
+
+
+
 
 @media (max-width: 992px) {
     .hidden-logo {

@@ -1,0 +1,96 @@
+.menu-container {
+    position: absolute;
+    top: 1vh;
+    right: 2vh;
+    z-index: 10;
+}
+
+.menu-holder {
+    position: absolute;
+    height: 100vh;
+    top: -1vh;
+    right: -20px;
+    width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fffffe;
+    transition: .5s;
+}
+
+.menu-holder.active {
+    width: 160px;
+}
+
+.hb-icon-one,
+.hb-icon-two,
+.hb-icon-three {
+    width: 30px;
+    height: 2px;
+    background-color: #fffffe;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.hb-icon-holder {
+    z-index: 10;
+    cursor: pointer;
+    margin-left: 2vh;
+    padding: 1vh;
+    text-align: right;
+}
+
+.hb-icon-holder.active .hb-icon-one {
+    background-color: #000A2B;
+}
+
+.hb-icon-holder.active .hb-icon-two {
+    width: 20px;
+    background-color: #000A2B;
+}
+
+.hb-icon-holder.active .hb-icon-three {
+    width: 10px;
+    background-color: #000A2B;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000A2B;
+    margin-bottom: 5vh;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    background-color: #09406700;
+    transition: .5s;
+    text-transform: uppercase;
+    font-size: 1.7vh;
+    padding: .5vh 1vh;
+    display: none;
+}
+
+.navbar a:hover {
+    color: #000A2B;
+    background-color: #fffffe;
+}
+
+.menu-holder.active .navbar a {
+    display: block;
+}
+
+@media (max-width: 500px) {
+    .menu-holder.active {
+        width: 140px;
+        right: -20px;
+    }
+
+    .button-holder {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,92 @@
+.create-test-holder {
+    height: 53vh;
+    overflow-y: scroll;
+}
+
+.test-list-holder {
+    height: 78vh;
+    overflow-y: scroll;
+}
+
+.test-list-holder nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vh 3vh;
+    border: 1px solid;
+    margin-bottom: 1vh;
+    border-radius: 1vh;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
+    transition: .5s;
+    cursor: pointer;
+    font-size: 1.7vh;
+    font-weight: 400;
+    color: #fffffe;
+}
+
+.test-list-holder nav.active {
+    background-color: #fffffe;
+    color: #5f6c7b;
+}
+
+.test-list-holder nav:hover {
+    background-color: #fffffe;
+    color: #5f6c7b;
+}
+
+.selected-test-details {
+    padding-left: 2vh;
+}
+
+.selected-test-holder {
+    padding: 2vh;
+    background-color: #5f6c7b85;
+    border: 1px solid #fffffe;
+    border-radius: 1vh;
+    color: #fffffe;
+    font-weight: 300;
+}
+
+.selected-test-holder h3 {
+    font-weight: 400;
+    font-size: 2vh;
+    margin-bottom: 2vh;
+}
+
+.selected-test-holder div {
+    margin-bottom: 1vh;
+}
+
+.selected-test-holder div p {
+    font-size: 1.7vh;
+}
+
+.selected-test-holder p {
+    margin-bottom: 1vh;
+
+}
+
+@media (max-width: 992px) {
+    .test-list-container .pages-col-6.left {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    .test-list-container .pages-col-6.right {
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+
+    .test-list-holder nav .items {
+        display: none;
+    }
+}
+
+@media (max-width: 690px) {
+    .test-list-holder nav {
+        padding: 1vh;
+    }
+
+}

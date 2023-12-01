@@ -1,0 +1,584 @@
+.user-data-links {
+    display: flex;
+    margin-bottom: .5vh;
+}
+
+.user-data-links a {
+    text-decoration: none;
+    margin-right: .5vh;
+
+}
+
+.user-data-links .db-users-links nav {
+    color: #fffffe;
+    font-family: 'Orbitron', sans-serif;
+    width: 150px;
+    border: 1px solid;
+    padding: .5vh;
+    text-align: center;
+    transition: .5s;
+    border-radius: 1vh;
+}
+
+.user-data-links .db-users-links nav:hover {
+    background-color: #fffffe;
+    border: 1px solid transparent;
+    border-radius: 1vh;
+    color: #5f6c7b;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+.db-users-links.active nav {
+    background-color: #fffffe;
+    border: 1px solid transparent;
+    border-radius: 1vh;
+    color: #5f6c7b;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+
+.add-course-form {
+    min-height: 68vh;
+    margin-top: 2vh;
+}
+
+.add-course-form input {
+    padding: 1vh;
+    font-size: 1.8vh;
+    width: 20vh;
+    height: 4.5vh;
+    color: #094067;
+    text-transform: capitalize;
+    border-radius: 1vh;
+    border: none;
+    margin-bottom: 1vh;
+    margin-top: .5vh;
+    margin-right: 1vh;
+    background-color: #5f6c7bcc;
+    font-weight: 300;
+}
+
+.add-course-form input::placeholder {
+    color: #fffffe;
+    font-weight: 300;
+}
+
+.add-course-holder textarea {
+    width: 100%;
+    padding: 1vh;
+    font-size: 1.8vh;
+    border-radius: 1vh;
+    border: none;
+    background-color: #5f6c7bcc;
+    font-weight: 300;
+}
+
+.add-course-holder textarea::placeholder {
+    color: #fffffe;
+    font-weight: 300;
+}
+
+.add-course-holder button {
+    padding: .5vh;
+    font-size: 1.8vh;
+    width: 15vh;
+    height: 4.5vh;
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+    margin-top: .5vh;
+    box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 11px 5px #00000033 inset;
+    -moz-box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2) inset;
+    background-color: #fffffe;
+    border-radius: 1vh;
+    border: none;
+    cursor: pointer;
+    color: #5f6c7b;
+    transition: .5s;
+    font-weight: 300;
+    text-transform: uppercase;
+
+}
+
+.add-course-holder button:hover {
+    background-color: #5f6c7b;
+    color: #fffffe;
+}
+
+.unit-holder {
+    padding: 1vh;
+    background-color: rgba(255, 255, 254, 0.8);
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+    box-shadow: 0px 0px 52px 15px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 52px 15px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0px 0px 52px 15px rgba(0, 0, 0, 0.2) inset;
+}
+
+.ac-bttn-hldr {
+    text-align: right;
+}
+
+.course-holder {
+    padding: 2vh;
+}
+
+.course-card {
+    margin-top: 1vh;
+    padding: 1vh;
+    height: 25vh;
+    width: 100%;
+    border-radius: 1vh;
+    background-color: rgb(255, 255, 254);
+    box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 11px 5px #00000033 inset;
+    -moz-box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2) inset;
+    transition: .5s;
+}
+
+.course-card:hover {
+    margin-top: 0;
+}
+
+.course-card-header {
+    padding: 1vh;
+}
+
+.course-card-header h4 {
+    color: #5f6c7b;
+}
+
+.db-links {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.db-links svg {
+    color: #fffffe;
+    margin-right: 1vh;
+}
+
+
+.course-list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course-list-header button {
+    padding: 1.5vh;
+    box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 11px 5px #00000033 inset;
+    -moz-box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2) inset;
+    background-color: #d8eefe;
+    border-radius: 1vh;
+    border: none;
+    cursor: pointer;
+    font-size: 1.6vh;
+    color: #094067;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.course-list-header button:hover {
+    background-color: #094067;
+    color: #d8eefe;
+}
+
+.course-details-container {
+    background-color: #000A2B;
+    background-image: linear-gradient(to bottom, #0e4166db, #000A2B);
+}
+
+.course-details-holder {
+    padding: 2vh;
+}
+
+
+.course-details-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+    background-color: #0000006c;
+    box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 1vh;
+    padding: 0 2vh;
+    margin-bottom: 2vh;
+}
+
+.course-details-body .pages-col-4 {
+    padding-right: 2vh;
+}
+
+.course-navigation {
+    height: 86vh;
+    background-color: #0000006c;
+    box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 1vh;
+    padding: 4vh 2vh;
+}
+
+.course-unit-details {
+    height: 22vh;
+    background-color: #0000006c;
+    box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 1vh;
+    margin-bottom: 2vh;
+    padding: 3vh 2vh;
+    overflow-y: scroll;
+}
+
+.course-unit-details p {
+    margin-top: 2vh;
+    color: #fffffe;
+    font-size: 1.7vh;
+    line-height: 2vh;
+    text-align: justify;
+}
+
+.course-topics {
+    height: 62vh;
+    background-color: #0000006c;
+    box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 1vh;
+    padding: 3vh 2vh;
+    overflow-y: scroll;
+}
+
+.course-topics p {
+    color: #fffffe;
+}
+
+.course-topics div nav {
+    font-size: 1.7vh;
+    color: #fffffe;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.course-modal-container {
+    top: 0;
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    padding: 5vh 0;
+}
+
+.batch-list-holder nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1vh;
+}
+
+.batch-list-holder nav p {
+    color: #fffffe;
+}
+
+.batch-list-holder nav button {
+    background-color: #fffffe;
+    color: #5f6c7b;
+    padding: .5vh;
+    border-radius: 1vh;
+    border: none;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.batch-list-holder nav button:hover {
+    background-color: #5f6c7b;
+    color: #fffffe;
+}
+
+.batch-selection-holder {
+    height: 65vh;
+    overflow-y: scroll;
+}
+
+.batch-selection-holder label {
+    color: #fffffe;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+.batch-selection-holder input {
+    margin-right: 1vh;
+}
+
+.batch-selection-holder li {
+    list-style: none;
+    color: #fffffe;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+.create-batch-container button {
+    padding: 0.5vh;
+    font-size: 1.8vh;
+    width: 15vh;
+    height: 4.5vh;
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+    margin-top: 0.5vh;
+    box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 11px 5px #00000033 inset;
+    -moz-box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2) inset;
+    background-color: #fffffe;
+    border-radius: 1vh;
+    border: none;
+    cursor: pointer;
+    color: #5f6c7b;
+    transition: .5s;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.create-batch-container button:hover {
+    background-color: #5f6c7b;
+    color: #fffffe;
+}
+
+.event-calendar-holder {
+    height: 50vh;
+    background-color: #5f6c7b2d;
+    border-radius: 1vh;
+    color: #fffffe;
+}
+
+.rbc-off-range-bg {
+    background: #e6e6e68e !important;
+}
+
+.rbc-off-range {
+    color: #fffffe !important;
+}
+
+.rbc-toolbar button {
+    color: #fffffe !important;
+}
+
+button.rbc-active {
+    color: #373a3c !important;
+}
+
+.rbc-toolbar button:hover {
+    color: #373a3c !important;
+}
+
+.rbc-event,
+.rbc-day-slot .rbc-background-event {
+    background-color: #5f6c7b !important;
+    color: #fffffe !important;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+.rbc-today {
+    background-color: #000a2ba2 !important;
+}
+
+.react-datepicker-wrapper {
+    width: 100%;
+}
+
+.profile-cover {
+    height: 25vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1vh;
+}
+
+.profile-pic {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -10vh;
+    left: 3vw;
+}
+
+.profile-pic img {
+    height: 15vh;
+    width: 15vh;
+    border-radius: 50%;
+    margin-right: 3vh;
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile-pic h5 {
+    color: #fffffe;
+
+}
+
+.profile-overview {
+    margin-top: 10vh;
+}
+
+.profile-overview h3 {
+    color: #fffffe;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+}
+
+.details-style {
+    padding: 1vh;
+}
+
+.details-style input {
+    width: 100%;
+    margin: 1.5vh 0;
+    height: 4.5vh;
+    padding: 1vh;
+    border-radius: 1vh;
+    border: 1px solid #5f6c7b88;
+    font-size: 1.7vh;
+}
+
+.details-style label {
+    color: #fffffe;
+    font-size: 1.7vh;
+}
+
+.details-style input::placeholder {
+    color: #5f6c7b;
+    font-size: 1.7vh;
+}
+
+.modal-container {
+    position: absolute;
+    height: 100vh;
+    width: 105vw;
+    padding: 5vh 0;
+    top: -10vh;
+    left: -20vw;
+    z-index: 15;
+    background-color: rgba(0, 0, 0, 0.534);
+}
+
+.modal-content {
+    width: 50%;
+    height: 90vh;
+    margin: auto;
+    background-color: rgba(95, 108, 123, 0.8);
+    box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 1vh;
+    padding: 4vh 2vw;
+    overflow-y: scroll;
+}
+
+.modal-content p {
+    color: #fffffe;
+    font-weight: 300;
+}
+
+.modal-content nav {
+    padding-left: 1vh;
+    color: #fffffe;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+}
+
+.modal-header svg {
+    color: #fffffe;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.modal-header svg:hover {
+    color: #000A2B;
+}
+
+@media (max-width: 1200px) {
+    .courses-holder .pages-col-3 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+@media (max-width: 992px) {
+    .modal-container {
+        width: 100vw;
+        left: -10vw;
+    }
+}
+
+
+@media (max-width: 690px) {
+    .user-data-links .db-users-links nav {
+        width: 80px;
+        font-size: 1.5vh;
+    }
+
+    .courses-holder .pages-col-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .modal-container {
+        width: 100vw;
+        left: -1.5vw;
+    }
+
+    .pages-col-10.md-outer.active .db-section-content .datatable .modal-container {
+        left: -11vw;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .batch-list-holder .pages-col-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .profile-details .pages-row .pages-col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .courses-holder .pages-col-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .batch-list-holder .pages-col-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

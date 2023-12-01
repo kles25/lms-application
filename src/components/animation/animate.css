@@ -1,4 +1,4 @@
-svg {
+svg.wave-animation {
     position: absolute;
     top: 0;
     left: 0;
@@ -13,27 +13,25 @@ svg {
 
 
 .scene {
-    width: 150px;
-    height: 150px;
-    perspective: 400px;
+    width: 25vh;
+    height: 25vh;
+    perspective: 40vh;
 }
 
 .cube {
-    width: 180px;
-    height: 180px;
+    width: 25vh;
+    height: 25vh;
     position: relative;
     transform-style: preserve-3d;
     transform: translateZ(-100px);
     transition: transform 1s;
-    animation: rotateCube 15s linear infinite;
+    animation: rotateCube 35s linear infinite;
 }
-
-
 
 .cube__face {
     position: absolute;
-    width: 180px;
-    height: 180px;
+    width: 25vh;
+    height: 25vh;
     border: .5vh solid #3da9fc;
 }
 
@@ -62,27 +60,27 @@ svg {
 }
 
 .cube__face--front {
-    transform: rotateY(0deg) translateZ(100px);
+    transform: rotateY(0deg) translateZ(13.5vh);
 }
 
 .cube__face--right {
-    transform: rotateY(90deg) translateZ(100px);
+    transform: rotateY(90deg) translateZ(13.5vh);
 }
 
 .cube__face--back {
-    transform: rotateY(180deg) translateZ(100px);
+    transform: rotateY(180deg) translateZ(13.5vh);
 }
 
 .cube__face--left {
-    transform: rotateY(-90deg) translateZ(100px);
+    transform: rotateY(-90deg) translateZ(13.5vh);
 }
 
 .cube__face--top {
-    transform: rotateX(90deg) translateZ(100px);
+    transform: rotateX(90deg) translateZ(13.5vh);
 }
 
 .cube__face--bottom {
-    transform: rotateX(-90deg) translateZ(100px);
+    transform: rotateX(-90deg) translateZ(13.5vh);
 }
 
 .scene2 {

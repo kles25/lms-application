@@ -6,7 +6,7 @@ import 'aos/dist/aos.css'
 import { useEffect } from "react";
 import AnimatedWaves from "../../components/animation/AnimatedWaves";
 import AnimateCube from "../../components/animation/AnimatedCube";
-import HomeNavigation from "../../components/homenavigation/HomeNavigation";
+import HomeNavigation from "../../components/menunavigation/MenuNavigation";
 
 function Contact() {
 

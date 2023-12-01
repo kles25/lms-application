@@ -2,13 +2,21 @@
     position: absolute;
     display: flex;
     justify-content: space-between;
-    bottom: 3vh;
+    bottom: 4vh;
+    left: 3vh;
     width: 250px;
 }
 
 .footer-holder a {
     text-decoration: none;
     font-family: 'icons_social_media';
-    color: rgba(255, 255, 254, 0.8);
+    color: rgb(255, 255, 254);
     font-size: 4vh;
+    transition: .5s;
+    margin-top: .5vh;
+}
+
+.footer-holder a:hover {
+    color: #000A2B;
+    margin-top: 0;
 }

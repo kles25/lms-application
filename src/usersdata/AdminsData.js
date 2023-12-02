@@ -109,17 +109,6 @@ const AdminsData = () => {
                                 })
                             }
                         />
-                        <label>Username:</label>
-                        <input
-                            type="text"
-                            value={editedItemData.username}
-                            onChange={(e) =>
-                                setEditedItemData({
-                                    ...editedItemData,
-                                    username: e.target.value,
-                                })
-                            }
-                        />
                         <label>Birthdate:</label>
                         <input
                             type="date"
@@ -175,8 +164,8 @@ const AdminsData = () => {
                                 })
                             }
                         />
-                        <button className="save-button" onClick={handleSave}>Save</button>
-                        <button className="cancel-button" onClick={handleCancel}>Cancel</button>
+                        <button className="form-button" onClick={handleSave}>Save</button>
+                        <button className="form-button" onClick={handleCancel}>Cancel</button>
                     </div>
 
                 ) : (
@@ -198,7 +187,7 @@ const AdminsData = () => {
                         <input placeholder={data.phone} readOnly />
                         <label>Address:</label>
                         <input placeholder={data.address} readOnly />
-                        <button onClick={handleEdit}>Edit</button>
+                        <button className="form-button" onClick={handleEdit}>Edit</button>
                     </div>
                 )}
             </div>
@@ -265,7 +254,7 @@ const AdminsData = () => {
                     </div>
                 </div>
             )}
-            <DataGrid style={{ color: "#fffffe", fontWeight: "300" }}
+            <DataGrid style={{ color: "#fffffe", fontWeight: "300", backgroundColor: "#071c30e6" }}
                 className="datagrid"
                 rows={data}
                 columns={userColumns.concat(actionColumn)}

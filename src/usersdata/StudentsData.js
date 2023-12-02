@@ -88,8 +88,6 @@ const StudentsData = () => {
         };
 
         return (
-
-
             <div className="modal">
                 <div className="modal-header">
                     <h3 className="db-title">User Details</h3>
@@ -106,17 +104,6 @@ const StudentsData = () => {
                                 setEditedItemData({
                                     ...editedItemData,
                                     displayName: e.target.value,
-                                })
-                            }
-                        />
-                        <label>Username:</label>
-                        <input
-                            type="text"
-                            value={editedItemData.username}
-                            onChange={(e) =>
-                                setEditedItemData({
-                                    ...editedItemData,
-                                    username: e.target.value,
                                 })
                             }
                         />
@@ -175,8 +162,8 @@ const StudentsData = () => {
                                 })
                             }
                         />
-                        <button className="save-button" onClick={handleSave}>Save</button>
-                        <button className="cancel-button" onClick={handleCancel}>Cancel</button>
+                        <button className="form-button" onClick={handleSave}>Save</button>
+                        <button className="form-button" onClick={handleCancel}>Cancel</button>
                     </div>
 
                 ) : (
@@ -184,8 +171,6 @@ const StudentsData = () => {
                     <div className="form-input">
                         <label>Name:</label>
                         <input placeholder={data.displayName} readOnly />
-                        <label>Username:</label>
-                        <input className="lowercase-up" placeholder={data.username} readOnly />
                         <label>Role:</label>
                         <input placeholder={data.role} readOnly />
                         <label>Birthdate:</label>
@@ -198,7 +183,7 @@ const StudentsData = () => {
                         <input placeholder={data.phone} readOnly />
                         <label>Address:</label>
                         <input placeholder={data.address} readOnly />
-                        <button onClick={handleEdit}>Edit</button>
+                        <button className="form-button" onClick={handleEdit}>Edit</button>
                     </div>
                 )}
             </div>
@@ -255,9 +240,9 @@ const StudentsData = () => {
                 </div>
             )}
             {showModal && (
-                <div className="user-modal-container">
+                <div className="modal-container">
                     <div className="modal-background" onClick={() => setShowModal(false)} />
-                    <div className="user-modal-content">
+                    <div className="modal-content">
                         <DetailsModal
                             data={selectedItemData}
                             onClose={() => setShowModal(false)}
@@ -265,7 +250,7 @@ const StudentsData = () => {
                     </div>
                 </div>
             )}
-            <DataGrid style={{ color: "#fffffe", fontWeight: "300" }}
+            <DataGrid style={{ color: "#fffffe", fontWeight: "300", backgroundColor: "#071c30e6" }}
                 className="datagrid"
                 rows={data}
                 columns={userColumns.concat(actionColumn)}

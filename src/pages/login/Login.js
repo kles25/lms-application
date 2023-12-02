@@ -56,6 +56,9 @@ function Login() {
     return (
         <>
             <AnimatedWaves />
+            <div className="animate-cube-holder">
+                <AnimateCube></AnimateCube>
+            </div>
             <div className="login-background">
                 <section className="login-container">
                     <div className="pages-row">
@@ -65,7 +68,6 @@ function Login() {
                                 data-aos-duration="3000"
                                 data-aos-offset="300"
                                 data-aos-easing="ease-in-sine">
-                                <AnimateCube />
                             </div>
                         </div>
                         <div className="pages-col-4">

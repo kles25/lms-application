@@ -67,40 +67,44 @@ const ClassList = () => {
     };
 
     return (
-        <div className='batch-list-container'>
-            <div className='batch-list-holder'>
-                {batches.map((batch) => (
-                    <nav className='pages-col-4' key={batch.id} >
-                        <p>{batch.batchName}</p>
-                        <button onClick={() => handleBatchClick(batch)}>View Details</button>
-                    </nav>
-                ))}
-            </div>
-            {/* Modal to display batch details */}
-            {selectedBatch && (
-                <div className="modal-container">
-                    <div className="modal-content">
-                        <div className='modal-header'>
-                            <h3 className='db-title'>Batch Details</h3>
-                            <CloseIcon onClick={closeModal} />
-                        </div>
-
-                        <h5 className='db-sub-title'>Batch: {selectedBatch.batchName}</h5>
-                        <h5 className='db-sub-title'>Course: {selectedBatch.course}</h5>
-                        <h5 className='db-sub-title'>Teacher: {selectedBatch.teacher}</h5>
-
-                        <h5 className='db-sub-title'>List of Students:</h5>
-                        <div className='sl-holder'>
-                            {batchStudents.map((student) => (
-                                <nav key={student.id}>
-                                    {student.displayName} {/* Assuming 'displayName' is the field */}
-                                    {/* Display other student details */}
-                                </nav>
-                            ))}
-                        </div>
+        <div className='test-list-container'>
+            <div className='pages-row'>
+                <div className='pages-col-6 left'>
+                    <div className='test-list-holder'>
+                        {batches.map((batch) => (
+                            <nav key={batch.id} onClick={() => handleBatchClick(batch)}>
+                                <p className="title">{batch.batchName}</p>
+                            </nav>
+                        ))}
                     </div>
                 </div>
-            )}
+                <div className='pages-col-6 right'>
+                    {selectedBatch && (
+                        <div className="selected-test-details">
+                            <div className="selected-test-holder" style={{ height: "78.5vh", overflowY: "scroll" }}>
+                                <div className='db-header-holder'>
+                                    <h3 className='db-sub-title'>Batch Details</h3>
+                                    <CloseIcon onClick={closeModal} />
+                                </div>
+
+                                <h5 className='db-sub-title'>Batch: {selectedBatch.batchName}</h5>
+                                <h5 className='db-sub-title'>Course: {selectedBatch.course}</h5>
+                                <h5 className='db-sub-title'>Teacher: {selectedBatch.teacher}</h5>
+
+                                <h5 className='db-sub-title'>List of Students:</h5>
+                                <div className='sl-holder'>
+                                    {batchStudents.map((student) => (
+                                        <nav key={student.id}>
+                                            {student.displayName} {/* Assuming 'displayName' is the field */}
+
+                                        </nav>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </div>
         </div>
     );
 };

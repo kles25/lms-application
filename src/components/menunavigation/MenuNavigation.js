@@ -10,7 +10,7 @@ import { doc, getDoc } from "firebase/firestore";
 
 const navLinks = [
     { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
+    { path: '/about/about-us', label: 'About' },
     { path: '/news', label: 'News' },
     { path: '/contact', label: 'Contact' },
 ];
@@ -24,34 +24,49 @@ function MenuNavigation() {
     const handleLogout = async () => {
         try {
             await signOut(auth); // Perform logout action
-            window.location.reload(); // Refresh the page after logout
+            // Refresh the page after logout
         } catch (error) {
             console.error("Error logging out:", error);
         }
     };
 
+    // Function to check user role
+    const checkUserRole = async (uid) => {
+        const adminRef = doc(db, "admins", uid);
+        const teacherRef = doc(db, "teachers", uid);
+        const studentRef = doc(db, "students", uid);
+
+        const adminDoc = await getDoc(adminRef);
+        const teacherDoc = await getDoc(teacherRef);
+        const studentDoc = await getDoc(studentRef);
+
+        if (adminDoc.exists()) {
+            return 'admin';
+        } else if (teacherDoc.exists()) {
+            return 'teacher';
+        } else if (studentDoc.exists()) {
+            return 'student';
+        } else {
+            // Handle case where no role exists for the user
+            return 'default'; // Set a default role if needed
+        }
+    };
+
+    // Inside useEffect
     useEffect(() => {
-        const getUserRole = async () => {
-            if (currentUser) {
-                const adminRef = doc(db, "admins", currentUser.uid);
-                const teacherRef = doc(db, "teachers", currentUser.uid);
-                const studentRef = doc(db, "students", currentUser.uid);
-
-                const adminDoc = await getDoc(adminRef);
-                const teacherDoc = await getDoc(teacherRef);
-                const studentDoc = await getDoc(studentRef);
-
-                if (adminDoc.exists()) {
-                    setUserRole('admin');
-                } else if (teacherDoc.exists()) {
-                    setUserRole('teacher');
-                } else if (studentDoc.exists()) {
-                    setUserRole('student');
+        const fetchUserRole = async () => {
+            try {
+                if (currentUser) {
+                    const userRole = await checkUserRole(currentUser.uid);
+                    setUserRole(userRole);
                 }
+            } catch (error) {
+                // Log or handle the error here
+                console.error("Error fetching user role:", error);
             }
         };
 
-        getUserRole();
+        fetchUserRole();
     }, [currentUser]);
 
 

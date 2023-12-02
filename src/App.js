@@ -44,6 +44,11 @@ import StudentTest from './pages/student/StudentTest';
 import StudentGrades from './pages/student/StudentGrades';
 import StudentCalendar from './pages/student/StudentCalendar';
 import StudentProfile from './pages/student/StudentProfile';
+import AboutUs from './pages/about/AboutUs';
+import OurMission from './pages/about/OurMission';
+import WhatSetsUsApart from './pages/about/WhatSetsUsApart';
+import OurPrograms from './pages/about/OurPrograms';
+import JoinUs from './pages/about/JoinUs';
 
 
 
@@ -63,7 +68,13 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
+      <Route path="about" element={<About />} >
+        <Route path="about-us" element={<AboutUs />} />
+        <Route path="our-mission" element={<OurMission />} />
+        <Route path="what-sets-apart" element={<WhatSetsUsApart />} />
+        <Route path="our-programs" element={<OurPrograms />} />
+        <Route path="join-us" element={<JoinUs />} />
+      </Route>
       <Route path="/news" element={<News />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/login" element={<Login />} />

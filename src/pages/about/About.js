@@ -5,8 +5,10 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
 import AnimatedWaves from "../../components/animation/AnimatedWaves";
-import AnimateCube from "../../components/animation/AnimatedCube";
 import HomeNavigation from "../../components/menunavigation/MenuNavigation";
+import AboutNavigation from "../../components/menunavigation/AboutNavigation";
+import Footer from "../../components/footer/Footer";
+import { Outlet } from "react-router-dom";
 
 function About() {
 
@@ -29,27 +31,23 @@ function About() {
                             <Header />
                         </div>
                         <div className="pages-col-12">
-                            <div className="pages-row home-hero">
-                                <div className="pages-col-7">
-                                    <div className="hero-details">
-                                        <h1 data-aos="fade-right"
-                                            data-aos-offset="300"
-                                            data-aos-duration="2500"
-                                            data-aos-easing="ease-in-sine">About</h1>
+                            <div className='pages-container'>
+                                <div className="pages-row">
+                                    <div className="pages-col-3">
+                                        <div className="about-navigation-container">
+                                            <AboutNavigation />
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="pages-col-5">
-                                    <div className="hero-img"
-                                        data-aos="zoom-in"
-                                        data-aos-duration="3000"
-                                        data-aos-offset="300"
-                                        data-aos-easing="ease-in-sine">
-                                        <AnimateCube />
+                                    <div className="pages-col-9">
+                                        <div className="about-outlet-container">
+                                            <Outlet />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <Footer />
                 </section>
             </div>
         </>

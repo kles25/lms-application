@@ -53,7 +53,7 @@ const EventCalendar = () => {
                 onSelectEvent={handleSelectEvent}
                 selectable
                 resizable
-                style={{ padding: '2vh' }}
+                style={{ padding: '2vh', backgroundColor: "#071c30e6", fontSize: "1.7vh!important" }}
             />
             {selectedEvent && (
                 <div className="event-details" style={{ marginTop: "2vh" }}>

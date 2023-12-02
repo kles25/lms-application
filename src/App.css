@@ -214,7 +214,7 @@ body {
 }
 
 .db-navigation-links {
-  color: #d8eefe;
+  color: #fffffe;
   transition: .5s;
   margin-bottom: 2vh;
 }
@@ -475,7 +475,7 @@ body {
 .form-input select {
   width: 100%;
   height: 4.5vh;
-  background-color: #5f6c7b85;
+  background-color: #071c30e6;
   border: 1px solid #fffffe;
   margin-top: .5vh;
   margin-bottom: 1vh;
@@ -485,9 +485,13 @@ body {
   border-radius: 1vh;
 }
 
+.form-input input::placeholder {
+  color: #fffffe;
+}
+
 .form-input textarea {
   width: 100%;
-  background-color: #5f6c7b85;
+  background-color: #071c30e6;
   border: 1px solid #fffffe;
   margin-top: .5vh;
   margin-bottom: 1vh;
@@ -496,6 +500,11 @@ body {
   font-size: 1.7vh;
   border-radius: 1vh;
 }
+
+.form-input textarea::placeholder {
+  color: #fffffe;
+}
+
 
 input[type="date" i] {
   text-transform: uppercase;
@@ -520,8 +529,8 @@ input[type="date" i] {
 
 .form-input .form-button {
   width: 100%;
-  background-color: #5f6c7b;
-  color: #fffffe;
+  background-color: #fffffe;
+  color: #5f6c7b;
   box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2) inset;
   -webkit-box-shadow: 0px 0px 11px 5px #00000033 inset;
   -moz-box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2) inset;
@@ -537,8 +546,8 @@ input[type="date" i] {
 
 .form-button {
   padding: 1vh 2vh;
-  background-color: #5f6c7b;
-  color: #fffffe;
+  background-color: #fffffe;
+  color: #5f6c7b;
   box-shadow: 0px 0px 21px 10px rgba(0, 0, 0, 0.2) inset;
   -webkit-box-shadow: 0px 0px 21px 10px #00000033 inset;
   -moz-box-shadow: 0px 0px 21px 10px rgba(0, 0, 0, 0.2) inset;
@@ -552,6 +561,13 @@ input[type="date" i] {
   transition: .5s;
 }
 
+
+.answered {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .disabled-btn {
   opacity: 0.5;
   cursor: not-allowed;
@@ -559,20 +575,14 @@ input[type="date" i] {
 }
 
 .form-button:hover {
-  background-color: #fffffe;
-  color: #5f6c7b;
+  background-color: #5f6c7b;
+  color: #fffffe;
 }
 
-.form-holder button:hover {
-  background-color: #fffffe;
-  color: #5f6c7b;
-  border: 1px solid #5f6c7b;
-}
-
-.form-input button:hover {
-  background-color: #fffffe;
-  color: #5f6c7b;
-  border: 1px solid #5f6c7b;
+.form-holder .form-button:hover {
+  background-color: #5f6c7b;
+  color: #fffffe;
+  border: 1px solid #fffffe;
 }
 
 .notification-up {

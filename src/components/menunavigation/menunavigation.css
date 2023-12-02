@@ -14,12 +14,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fffffe;
+    background-color: rgba(9, 64, 103, 0.7);
     transition: .5s;
 }
 
 .menu-holder.active {
-    width: 160px;
+    width: 200px;
 }
 
 .hb-icon-one,
@@ -41,17 +41,17 @@
 }
 
 .hb-icon-holder.active .hb-icon-one {
-    background-color: #000A2B;
+    background-color: #fffffe;
 }
 
 .hb-icon-holder.active .hb-icon-two {
     width: 20px;
-    background-color: #000A2B;
+    background-color: #fffffe;
 }
 
 .hb-icon-holder.active .hb-icon-three {
     width: 10px;
-    background-color: #000A2B;
+    background-color: #fffffe;
 }
 
 .navbar {
@@ -63,7 +63,7 @@
 
 .navbar a {
     text-decoration: none;
-    color: #000A2B;
+    color: #fffffe;
     margin-bottom: 5vh;
     font-family: 'Orbitron', sans-serif;
     cursor: pointer;
@@ -75,10 +75,6 @@
     display: none;
 }
 
-.navbar a:hover {
-    color: #000A2B;
-    background-color: #fffffe;
-}
 
 .menu-holder.active .navbar a {
     display: block;

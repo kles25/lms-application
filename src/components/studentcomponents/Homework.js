@@ -4,6 +4,7 @@ import { db, storage } from '../../config/firebase';
 import { AuthContext } from '../../context/AuthContext';
 import CloseIcon from '@mui/icons-material/Close';
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
+import classNames from 'classnames';
 
 const Homework = () => {
     const { currentUser } = useContext(AuthContext);
@@ -68,7 +69,12 @@ const Homework = () => {
 
                         if (homeworkSnapshot.exists()) {
                             const homeworkData = homeworkSnapshot.data();
-                            const startDate = new Date(homeworkData.startTime); // Convert startTime to a Date object
+                            const startDate = new Date(homeworkData.startTime);
+
+                            // Check if the homework exists in the answered collection
+                            const answered = await checkIfHomeworkAnswered(homeworkId);
+                            homeworkData.hasAnswered = answered;
+
                             if (startDate > new Date()) {
                                 // If start date is in the future, disable this homework
                                 homeworkData.disabled = true;
@@ -85,6 +91,23 @@ const Homework = () => {
         setBatchHomeworks(homeworks);
     };
 
+    const checkIfHomeworkAnswered = async (homeworkId) => {
+        try {
+            if (!currentUser) return false;
+
+            const answersCollectionRef = collection(db, 'homeworkAnswers');
+            const q = query(answersCollectionRef,
+                where('studentId', '==', currentUser.uid),
+                where('homeworkId', '==', homeworkId));
+            const querySnapshot = await getDocs(q);
+
+            return !querySnapshot.empty;
+        } catch (error) {
+            console.error('Error checking if homework answered: ', error);
+            return false;
+        }
+    };
+
     useEffect(() => {
         if (currentUser) {
             const studentId = currentUser.uid;
@@ -93,13 +116,19 @@ const Homework = () => {
     }, [currentUser]);
 
     const handleHomeworkClick = (homework) => {
-        setSelectedHomework(homework);
+        if (!homework.disabled) {
+            // Handle the click functionality
+            setSelectedHomework(homework);
+            setHasAnswered(false); // Reset hasAnswered state when selecting a different homework
+        }
+
     };
 
     const closeHomeworkDetails = () => {
         setSelectedHomework(null);
         setAnswerText('');
         setFile(null);
+        setHasAnswered(false); // Reset hasAnswered state when closing homework details
     };
 
     const handleAnswerTextChange = (event) => {
@@ -112,22 +141,21 @@ const Homework = () => {
     };
 
     const submitAnswer = async () => {
-        if (!currentUser || !selectedHomework || !answerText || !file) {
+        if (!currentUser || !selectedHomework || !answerText) {
             // Handle the case if any of the required fields are missing
             return;
         }
 
         try {
+            let downloadURL = null;
 
-            const date = new Date().getTime();
-            const storageRef = ref(storage, `${currentUser.displayName + date}`); // Change 'uploads' to your desired folder name
-            await uploadBytesResumable(storageRef, file);
-            const downloadURL = await getDownloadURL(storageRef);
-            // Upload the file to Firebase Storage
-
-
-
-
+            if (file) {
+                const date = new Date().getTime();
+                const storageRef = ref(storage, `${currentUser.displayName + date}`); // Change 'uploads' to your desired folder name
+                await uploadBytesResumable(storageRef, file);
+                downloadURL = await getDownloadURL(storageRef);
+                // Upload the file to Firebase Storage
+            }
 
             const answersCollectionRef = collection(db, 'homeworkAnswers'); // Change 'answers' to your desired collection name
             const newAnswer = {
@@ -138,7 +166,6 @@ const Homework = () => {
                 // Add other necessary fields as required
             };
 
-
             const docRef = await addDoc(answersCollectionRef, newAnswer);
             console.log('Answer submitted with ID: ', docRef.id);
 
@@ -146,10 +173,14 @@ const Homework = () => {
             setAnswerText('');
             setFile(null);
             setSubmitted(true);
+            setSelectedHomework(null);
+            window.location.reload();
         } catch (error) {
             console.error('Error submitting answer: ', error);
         }
     };
+
+
 
     return (
         <div className='test-list-container'>
@@ -159,9 +190,16 @@ const Homework = () => {
                         {batchHomeworks.map((homework) => (
                             <nav
                                 key={homework.id}
-                                className={selectedHomework && selectedHomework.id === homework.id ? 'active' : ''}
-                                onClick={() => handleHomeworkClick(homework)}>
+                                className={classNames(
+                                    '',
+                                    { 'active': selectedHomework && selectedHomework.id === homework.id },
+                                    { 'answered': homework.hasAnswered }
+                                )}
+                                onClick={() => handleHomeworkClick(homework)}
+                            // Consider removing the disabled attribute as it might not work with <nav>
+                            >
                                 <p>Title: {homework.title}</p>
+                                {homework.hasAnswered && <p>Answered</p>}
                             </nav>
                         ))}
                     </div>

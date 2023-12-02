@@ -24,6 +24,7 @@
     font-size: 1.7vh;
     font-weight: 400;
     color: #fffffe;
+    background-color: #071c30e6;
 }
 
 .test-list-holder nav.active {
@@ -40,9 +41,13 @@
     padding-left: 2vh;
 }
 
+.selected-test-details {
+    font-size: 1.7vh;
+}
+
 .selected-test-holder {
     padding: 2vh;
-    background-color: #5f6c7b85;
+    background-color: #071c30e6;
     border: 1px solid #fffffe;
     border-radius: 1vh;
     color: #fffffe;
@@ -66,6 +71,10 @@
 .selected-test-holder p {
     margin-bottom: 1vh;
 
+}
+
+.selected-test-holder nav {
+    font-size: 1.7vh;
 }
 
 @media (max-width: 992px) {

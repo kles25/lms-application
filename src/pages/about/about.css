@@ -1,0 +1,101 @@
+.pages-container {
+    height: 80vh;
+    width: 100%;
+    padding: 2vh;
+}
+
+.about-navigation-container {
+    height: 76vh;
+    padding: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-right: 2vh;
+}
+
+.about-outlet-container {
+    height: 76vh;
+    padding: 3vh;
+}
+
+.about-navigation-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-navigation-holder .about-nav-links {
+    text-decoration: none;
+    margin-bottom: 5vh;
+    color: #fffffe;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2vh;
+    text-transform: uppercase;
+    padding: 1vh 2vh;
+    width: 100%;
+    transition: .5s;
+}
+
+.about-navigation-holder .about-nav-links:hover {
+    background-color: #fffffe;
+    color: #5f6c7b;
+    box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2) inset;
+    border-radius: 1vh;
+}
+
+.about-navigation-holder .about-nav-links.active {
+    background-color: #fffffe;
+    color: #5f6c7b;
+    box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2) inset;
+    border-radius: 1vh;
+}
+
+.about-content-title {
+    color: #fffffe;
+    font-size: 9vh;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    margin-bottom: 3vh;
+}
+
+
+
+.about-content-img {
+    height: 60vh;
+    border: 1px solid;
+}
+
+.about-content-holder {
+    height: 55vh;
+    position: absolute;
+    border-radius: 1vh;
+    right: -5vw;
+    width: 90%;
+    box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 10, 43, 0.8);
+    z-index: 1;
+    overflow-y: scroll;
+}
+
+.about-content {
+    padding: 2vh;
+
+
+}
+
+.about-content h3 {
+    font-size: 2vh;
+    color: #fffffe;
+    margin-bottom: 1vh;
+}
+
+.about-content p {
+    font-size: 1.7vh;
+    color: #fffffe;
+    text-align: justify;
+}

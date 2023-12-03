@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: left;
     margin-right: 2vh;
+    transition: .5s;
 }
 
 .about-outlet-container {
@@ -54,18 +55,34 @@
 }
 
 .about-content-title {
+    top: -7vh;
     color: #fffffe;
     font-size: 9vh;
     font-family: 'Orbitron', sans-serif;
     font-weight: 600;
-    margin-bottom: 3vh;
+    text-transform: uppercase;
+    position: absolute;
+    width: 60vw;
+    z-index: 1;
 }
 
 
 
+
 .about-content-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 60vh;
-    border: 1px solid;
+    width: 100%;
+
+}
+
+.img-shade {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+
 }
 
 .about-content-holder {
@@ -77,9 +94,10 @@
     box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2);
-    background-color: rgba(0, 10, 43, 0.8);
-    z-index: 1;
+    background-color: rgba(9, 64, 103, 0.8);
     overflow-y: scroll;
+    bottom: -10vh;
+    z-index: 1;
 }
 
 .about-content {
@@ -98,4 +116,178 @@
     font-size: 1.7vh;
     color: #fffffe;
     text-align: justify;
+}
+
+
+.about-ribbon svg {
+    color: #fffffe;
+    font-size: 4vh;
+    transform: rotate(180deg);
+    cursor: pointer;
+    transition: 1s linear;
+    transition: transform 1s;
+    z-index: 10;
+    position: absolute;
+    display: none;
+}
+
+.about-ribbon svg.active {
+    transform: rotate(0deg);
+}
+
+.pages-button {
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.pages-button a {
+    text-decoration: none;
+    padding: 1vh 2vh;
+    color: #5f6c7b;
+    font-family: 'Orbitron', sans-serif;
+    transition: .5s;
+    font-size: 2vh;
+    background-color: #fffffe;
+    box-shadow: 0px 0px 22px 5px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 22px 5px rgba(0, 0, 0, 0.2)inset;
+    -moz-box-shadow: 0px 0px 22px 5px rgba(0, 0, 0, 0.2)inset;
+    background-color: rgba(9, 64, 103, 0.8)inset;
+    border-radius: 1vh;
+}
+
+.pages-button a:hover {
+    color: #fffffe;
+    background-color: #000A2B;
+
+}
+
+@keyframes forwardMove {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: 160px;
+    }
+}
+
+@keyframes backwardMove {
+    from {
+        left: 160px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
+
+@media (max-width: 992px) {
+    .pages-container {
+        padding: 0;
+    }
+
+    .about-navigation-container {
+        padding: 0;
+        margin-right: 0;
+    }
+
+    .about-outlet-container .pages-col-6 {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .about-content-img {
+        height: 76vh;
+        border-radius: 1vh;
+    }
+
+    .img-shade {
+        border-radius: 1vh;
+    }
+
+    .about-content-holder {
+        height: 60vh;
+        position: absolute;
+        border-radius: 1vh;
+        right: 0;
+        width: 100%;
+        box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2);
+        background-color: rgba(9, 64, 103, 0.8);
+        overflow-y: scroll;
+        bottom: -76vh;
+        z-index: 1;
+    }
+
+
+    .about-content-title {
+        position: absolute;
+        top: 0;
+        background-color: rgba(9, 64, 103, 0.8);
+        width: 100%;
+        border-radius: 1vh;
+        height: 14vh;
+        font-size: 5vh;
+        padding: 1vh;
+    }
+
+    .about-outlet-container {
+        height: 76vh;
+        padding: 0;
+    }
+
+
+}
+
+@media (max-width: 690px) {
+    .pages-container .pages-row .pages-col-3 {
+        flex: 0%;
+        max-width: 0%;
+    }
+
+    .pages-container .pages-row .pages-col-9 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about-content-title {
+        font-size: 4vh;
+    }
+
+    .about-outlet-container {
+        height: 76vh;
+        margin-top: 5vh;
+    }
+
+    .about-ribbon svg {
+        display: block;
+        animation: backwardMove .5s;
+        animation-fill-mode: forwards;
+
+    }
+
+    .about-ribbon svg.active {
+        transform: rotate(0deg);
+        animation: forwardMove .5s;
+        animation-fill-mode: forwards;
+    }
+
+    .about-navigation-container {
+        width: 170px;
+        position: absolute;
+        z-index: 5;
+        background-color: rgba(9, 64, 103);
+        height: 100vh;
+        top: -9vh;
+        left: -190px;
+    }
+
+    .about-navigation-container.active {
+        left: -20px;
+    }
+
+
+
+
 }

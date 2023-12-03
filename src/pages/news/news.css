@@ -1,0 +1,141 @@
+.news-container {
+    height: 80vh;
+    padding: 0 10vh;
+}
+
+
+
+.carousel-image {
+    width: 30vw;
+    height: 60vh;
+    margin: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-image-shade {
+    background-color: rgba(0, 10, 43, 0.5);
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-number {
+    position: absolute;
+    bottom: 0;
+    font-size: 10vh;
+    font-family: 'Orbitron', sans-serif;
+    left: 29px;
+    color: #fffffe;
+}
+
+.carousel-buttons {
+    position: absolute;
+    right: 2.5vw;
+    top: 5vh;
+}
+
+.carousel-buttons button {
+    padding: 2vh;
+    font-size: 2vh;
+    background-color: #fffffe;
+    border: none;
+    color: #000A2B;
+    margin: .1vh;
+    cursor: pointer;
+}
+
+.slide-details {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2vh;
+    color: #fffffe;
+    overflow-y: scroll;
+}
+
+.slide-details h2 {
+    font-size: 3vh;
+    margin-bottom: 2vh;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+}
+
+.slide-details p {
+    margin-bottom: 1vh;
+    font-size: 1.7vh;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.slide-details p.event-details {
+    margin-bottom: 4vh;
+}
+
+@media (max-width: 992px) {
+    .carousel .pages-row .pages-col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: 30vh;
+        margin-bottom: 5vh;
+    }
+
+    .carousel-buttons {
+        bottom: 7vh;
+        top: auto;
+    }
+
+    .carousel-number {
+        left: 2vh;
+        bottom: 5vh;
+    }
+
+    .slide-details {
+        height: 35vh;
+        justify-content: normal;
+    }
+}
+
+@media (max-width: 690px) {
+    .news-container {
+        height: 80vh;
+        padding: 0;
+    }
+
+    .carousel-number {
+        font-size: 5vh;
+        bottom: auto;
+        top: 0;
+    }
+
+    .carousel-buttons {
+        bottom: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        right: 0;
+    }
+
+    .carousel-buttons button {
+        padding: 0;
+        background-color: transparent;
+
+        color: #fffffe;
+        margin: 0 .5vh;
+    }
+
+    .carousel-buttons button svg {
+        font-size: 5vh;
+    }
+
+
+}

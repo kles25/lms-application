@@ -80,6 +80,12 @@
     display: block;
 }
 
+@media (max-width: 992px) {
+    .menu-holder {
+        background-color: rgba(9, 64, 103);
+    }
+}
+
 @media (max-width: 500px) {
     .menu-holder.active {
         width: 140px;

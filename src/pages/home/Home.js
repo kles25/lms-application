@@ -42,9 +42,6 @@ function Home() {
                                             data-aos-easing="ease-in-sine">Dive into Math's Ocean of Possibilities!</h1>
                                         <p data-aos="fade-right" data-aos-duration="2000" data-aos-offset="300" data-aos-easing="ease-in-sine">Embark on an adventure where the boundless depths of mathematics meet the endless expanse of the ocean. Discover the synergy between numbers and waves, unlocking a world of infinite possibilities waiting to be explored.</p>
                                         <div data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-in-sine" className="button-holder">
-                                            <Link to="/">
-                                                <button className="hb-one">Discover within</button>
-                                            </Link>
                                             <Link to="">
                                                 <button className="hb-two">Begin Enrollment</button>
                                             </Link>

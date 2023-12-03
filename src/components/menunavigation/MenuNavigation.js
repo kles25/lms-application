@@ -13,6 +13,7 @@ const navLinks = [
     { path: '/about/about-us', label: 'About' },
     { path: '/news', label: 'News' },
     { path: '/contact', label: 'Contact' },
+    { path: '/courses', label: 'Courses' },
 ];
 
 function MenuNavigation() {

@@ -1,19 +1,17 @@
-
+import "./courses.css"
 import Header from "../../components/header/Header";
-import "./enrollment.css"
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
 import AnimatedWaves from "../../components/animation/AnimatedWaves";
 import Footer from "../../components/footer/Footer";
 import MenuNavigation from "../../components/menunavigation/MenuNavigation";
-import EnrollmentForm from "./EnrollmentForm";
-import { enrolleesInput } from "../../form/FormSource";
+import CoursesCarousel from "./CoursesCarousel";
 
 
 
 
-function Enrollment() {
+function Courses() {
 
     useEffect(() => {
         Aos.init();
@@ -34,21 +32,8 @@ function Enrollment() {
                             <Header />
                         </div>
                         <div className="pages-col-12">
-                            <div className="enrollment-container">
-
-                                <div className="pages-row">
-                                    <div className="pages-col-7">
-                                        <h1 className="contact-title">ENROLLMENT FORM</h1>
-                                    </div>
-                                    <div className="pages-col-5">
-                                        <div className="enrollment-form">
-                                            <EnrollmentForm inputs={enrolleesInput} />
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
+                            <div className="courses-container">
+                                <CoursesCarousel />
                             </div>
                         </div>
                     </div>
@@ -59,4 +44,4 @@ function Enrollment() {
     )
 }
 
-export default Enrollment;
+export default Courses;

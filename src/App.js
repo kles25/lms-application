@@ -49,6 +49,8 @@ import OurMission from './pages/about/OurMission';
 import WhatSetsUsApart from './pages/about/WhatSetsUsApart';
 import OurPrograms from './pages/about/OurPrograms';
 import JoinUs from './pages/about/JoinUs';
+import Enrollment from './pages/enrollment/Enrollment';
+import Courses from './pages/courses/Courses';
 
 
 
@@ -77,6 +79,8 @@ function App() {
       </Route>
       <Route path="/news" element={<News />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/courses" element={<Courses />} />
+      <Route path="/enroll" element={<Enrollment />} />
       <Route path="/login" element={<Login />} />
       <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} >
         <Route path="home" element={<AdminHome />} />

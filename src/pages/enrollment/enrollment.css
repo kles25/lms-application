@@ -1,0 +1,30 @@
+.enrollment-container {
+    height: 80vh;
+    padding: 0 10vh;
+}
+
+.enrollment-form {
+    height: 70vh;
+    padding: 0 2vh;
+    overflow-y: scroll;
+    margin-top: 10vh;
+}
+
+@media (max-width: 992px) {
+
+    .enrollment-container .pages-row .pages-col-7,
+    .enrollment-container .pages-row .pages-col-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .enrollment-form {
+        margin-top: 0;
+        height: 70vh;
+    }
+
+    .enrollment-container {
+        padding: 0;
+    }
+
+}

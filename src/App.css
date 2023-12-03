@@ -576,12 +576,12 @@ input[type="date" i] {
 }
 
 .form-button:hover {
-  background-color: #5f6c7b;
+  background-color: #000A2B;
   color: #fffffe;
 }
 
 .form-holder .form-button:hover {
-  background-color: #5f6c7b;
+  background-color: #000A2B;
   color: #fffffe;
   border: 1px solid #fffffe;
 }

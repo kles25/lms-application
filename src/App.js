@@ -51,6 +51,7 @@ import OurPrograms from './pages/about/OurPrograms';
 import JoinUs from './pages/about/JoinUs';
 import Enrollment from './pages/enrollment/Enrollment';
 import Courses from './pages/courses/Courses';
+import EnrolleesData from './usersdata/EnrolleesData';
 
 
 
@@ -90,6 +91,7 @@ function App() {
           <Route path="admins" element={<AdminsData />} />
           <Route path="teachers" element={<TeachersData />} />
           <Route path="students" element={<StudentsData />} />
+          <Route path="enrollees" element={<EnrolleesData />} />
         </Route>
         <Route path="adduser" element={<AdminAddUser inputs={userInputs} title="Add New User" />} />
         <Route path="batch" element={<AdminBatch />} />

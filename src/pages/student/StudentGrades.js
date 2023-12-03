@@ -1,7 +1,12 @@
 import React from "react";
+import ComingSoon from "../../components/comingsoon/ComingSoon";
 
 function StudentGrades() {
-    return <div>StudentGrades</div>;
+    return (
+        <div>
+            <ComingSoon />
+        </div>
+    )
 }
 
 export default StudentGrades;

@@ -1,0 +1,13 @@
+.coming-soon {
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    justify-content: center;
+}
+
+.coming-soon h1 {
+    font-size: 10vh;
+    text-transform: uppercase;
+    color: #fffffe;
+    font-family: 'Orbitron', sans-serif;
+}

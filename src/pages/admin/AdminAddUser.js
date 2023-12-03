@@ -164,7 +164,9 @@ const AdminAddUser = ({ inputs, title }) => {
                                 <option value="teachers">Teacher</option>
                             </select>
                         </div>
-                        <button className="form-button" type="submit">Confirm</button>
+                        <div className="form-input">
+                            <button className="form-button" type="submit">Confirm</button>
+                        </div>
                         {loading && "Uploading and compressing the image please wait..."}
                         {err && <span>Something went wrong</span>}
                     </form>

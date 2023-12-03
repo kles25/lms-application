@@ -33,7 +33,6 @@ const EnrollmentForm = ({ inputs }) => {
     };
 
     const handleEnrollment = async () => {
-
         try {
             // Save input data to the 'enrollees' collection in Firestore
             await addDoc(collection(db, "enrollees"), {
@@ -60,12 +59,8 @@ const EnrollmentForm = ({ inputs }) => {
                         <select
                             id={input.id}
                             onChange={handleInput}
-                            defaultValue=""
-                            required
+                            defaultValue="" // Set default value to the placeholder
                         >
-                            <option value="" disabled hidden>
-                                Select gender
-                            </option>
                             {input.options.map((option) => (
                                 <option key={option.value} value={option.value}>
                                     {option.label}

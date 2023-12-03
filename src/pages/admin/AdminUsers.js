@@ -7,6 +7,7 @@ const navLinks = [
     { path: '/admin/users/admins', label: 'Admin' },
     { path: '/admin/users/teachers', label: 'Teachers' },
     { path: '/admin/users/students', label: 'Students' },
+    { path: '/admin/users/enrollees', label: 'Enrollees' },
 ];
 
 function AdminUser() {

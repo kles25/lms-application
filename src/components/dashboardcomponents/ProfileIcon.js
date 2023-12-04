@@ -18,7 +18,7 @@ function ProfileIcon() {
         <>
             <img className="tn-profile-pic" alt="avatar" src={currentUser.photoURL} onClick={handleIcon} />
             <div className={showProfileIcon ? 'icon-dropdown active' : 'icon-dropdown'}>
-                <Link className="profile-links" to="/admin/home">
+                <Link className="profile-links" to="">
                     <AccountCircleIcon />
                     <p>{currentUser.displayName}</p>
                 </Link>

@@ -112,7 +112,7 @@
     }
 
     .hero-details p {
-        margin-bottom: 10vh;
+        margin-bottom: 5vh;
         text-align: justify;
     }
 }
@@ -126,5 +126,11 @@
 
     .button-holder a button.hb-one {
         margin-right: 0;
+
+    }
+
+    .button-holder {
+        flex-direction: column;
+        align-items: normal;
     }
 }

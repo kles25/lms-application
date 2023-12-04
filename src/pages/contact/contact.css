@@ -29,6 +29,7 @@
 
     .contact-container {
         padding: 0;
+        height: 70vh;
     }
 
     .contact-details {
@@ -38,5 +39,11 @@
 
     .contact-title {
         font-size: 4vh;
+    }
+}
+
+@media (max-width: 690px) {
+    .contact-container {
+        height: 60vh;
     }
 }

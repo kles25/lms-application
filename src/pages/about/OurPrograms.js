@@ -1,7 +1,13 @@
-
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 function OurPrograms() {
+
+    useEffect(() => {
+        Aos.init();
+    }, [])
+
 
     const bgImageStyle = {
         backgroundImage: `url( https://images.pexels.com/photos/4143798/pexels-photo-4143798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)`,
@@ -10,8 +16,8 @@ function OurPrograms() {
     return (
         <div className="pages-row">
             <div className="pages-col-6 left-about">
-                <h1 className="about-content-title">Our Programs</h1>
-                <div className="about-content-holder">
+                <h1 data-aos="zoom-in" data-aos-duration="1500" className="about-content-title">Our Programs</h1>
+                <div className="about-content-holder" data-aos="fade-up" data-aos-duration="2500">
                     <div className="about-content">
                         <h3>Tailored for Every Learning Stage</h3>
                         <p>At H-CAMP, our curriculum isn't just a collection of courses—it's a meticulously crafted roadmap tailored to accommodate students at various stages of their mathematical journey. From foundational concepts to advanced topics, we offer a diverse array of programs designed to meet the needs of learners across all ages and proficiency levels.</p>
@@ -27,7 +33,7 @@ function OurPrograms() {
                 </div>
             </div>
             <div className="pages-col-6 right-about">
-                <div className="about-content-img" style={bgImageStyle}>
+                <div data-aos="fade-left" data-aos-duration="1000" className="about-content-img" style={bgImageStyle}>
                     <div className="img-shade"></div>
                 </div>
             </div>

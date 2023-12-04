@@ -115,14 +115,6 @@ const Homework = () => {
         }
     }, [currentUser]);
 
-    const handleHomeworkClick = (homework) => {
-        if (!homework.disabled) {
-            // Handle the click functionality
-            setSelectedHomework(homework);
-            setHasAnswered(false); // Reset hasAnswered state when selecting a different homework
-        }
-
-    };
 
     const closeHomeworkDetails = () => {
         setSelectedHomework(null);
@@ -180,6 +172,59 @@ const Homework = () => {
         }
     };
 
+    const handleHomeworkClick = (homework) => {
+        setSelectedHomework(homework);
+        setHasAnswered(false);
+
+    };
+
+
+    const renderSelectedHomeworkContent = () => {
+        if (!selectedHomework) return null;
+
+        const startDate = new Date(selectedHomework.startTime);
+
+        return (
+            <div className='selected-test-details'>
+                <div className='selected-test-holder'>
+                    <div className='db-header-holder'>
+                        <h3 style={{ marginBottom: "0" }} className='db-sub-title'>{selectedHomework.title}</h3>
+                        <CloseIcon onClick={closeHomeworkDetails} />
+                    </div>
+                    {startDate > new Date() ? (
+                        <>
+                            <p>The details will be available once the homework starts.</p>
+                            <p>Starts At: {selectedHomework.startTime}</p>
+                        </>
+                    ) : (
+                        <>
+                            <p>Points: {selectedHomework.points}</p>
+                            <p>Starts At: {selectedHomework.startTime}</p>
+                            <p>Ends In: {selectedHomework.endTime}</p>
+                            <p>Description: {selectedHomework.description}</p>
+                            <div className='form-input'>
+                                <textarea
+                                    rows="5"
+                                    value={answerText}
+                                    onChange={handleAnswerTextChange}
+                                    placeholder='Type your answer here...'
+                                    disabled={submitted || hasAnswered}
+                                />
+                            </div>
+                            <input type='file' onChange={handleFileChange} disabled={submitted || hasAnswered} />
+                            <button
+                                className={hasAnswered || submitted ? 'form-button disabled-btn' : 'form-button'}
+                                onClick={submitAnswer}
+                                disabled={submitted || hasAnswered}>
+                                {hasAnswered ? 'Answered' : 'Submit Answer'}
+                            </button>
+                        </>
+                    )}
+                </div>
+            </div>
+        );
+    };
+
 
 
     return (
@@ -196,7 +241,6 @@ const Homework = () => {
                                     { 'answered': homework.hasAnswered }
                                 )}
                                 onClick={() => handleHomeworkClick(homework)}
-                            // Consider removing the disabled attribute as it might not work with <nav>
                             >
                                 <p>Title: {homework.title}</p>
                                 {homework.hasAnswered && <p>Answered</p>}
@@ -205,50 +249,11 @@ const Homework = () => {
                     </div>
                 </div>
                 <div className='pages-col-6'>
-                    {selectedHomework && (
-                        <div className='selected-test-details'>
-                            <div className='selected-test-holder' style={{ height: "78.5vh", overflowY: "scroll" }}>
-                                <div className='db-header-holder'>
-                                    <h3 style={{ marginBottom: "0" }} className='db-sub-title'>{selectedHomework.title}</h3>
-                                    <CloseIcon onClick={closeHomeworkDetails} />
-                                </div>
-                                <div className='selected-homework-content'>
-                                    {selectedHomework.disabled ? (
-                                        <>
-                                            <p>The details will be available once the homework starts.</p>
-                                            <p>Starts At: {selectedHomework.startTime}</p>
-                                        </>
-                                    ) : (
-                                        <>
-                                            {/* Display other selected homework details */}
-                                            <p>Points: {selectedHomework.points}</p>
-                                            <p>Starts At: {selectedHomework.startTime}</p>
-                                            <p>Ends In: {selectedHomework.endTime}</p>
-                                            <p>Description: {selectedHomework.description}</p>
-                                            <div className='form-input'>
-                                                <textarea
-                                                    rows="5"
-                                                    value={answerText}
-                                                    onChange={handleAnswerTextChange}
-                                                    placeholder='Type your answer here...'
-                                                    disabled={submitted || hasAnswered}
-                                                />
-                                            </div>
-                                            <input type='file' onChange={handleFileChange} disabled={submitted || hasAnswered} />
-                                            <button
-                                                className={hasAnswered || submitted ? 'form-button disabled-btn' : 'form-button'}
-                                                onClick={submitAnswer}
-                                                disabled={submitted || hasAnswered}>{hasAnswered ? 'Answered' : 'Submit Answer'}</button>
-                                        </>
-                                    )}
-                                </div>
-                            </div>
-                        </div>
-                    )}
+                    {renderSelectedHomeworkContent()}
                 </div>
             </div>
         </div>
-    );
+    )
 };
 
 export default Homework;

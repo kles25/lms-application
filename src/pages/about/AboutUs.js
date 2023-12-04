@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 function AboutUs() {
+
+    useEffect(() => {
+        Aos.init();
+    }, [])
 
     const bgImageStyle = {
         backgroundImage: `url( https://images.pexels.com/photos/6518880/pexels-photo-6518880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)`,
@@ -9,8 +15,8 @@ function AboutUs() {
     return (
         <div className="pages-row">
             <div className="pages-col-6 left-about">
-                <h1 className="about-content-title">ABOUT US</h1>
-                <div className="about-content-holder">
+                <h1 data-aos="zoom-in" data-aos-duration="1500" className="about-content-title">ABOUT US</h1>
+                <div className="about-content-holder" data-aos="fade-up" data-aos-duration="2500">
                     <div className="about-content">
                         <h3>Welcome to H-CAMP</h3>
                         <p>At H-CAMP, we're passionate about unlocking the potential of every student through the power of mathematics. Founded on the belief that every individual has the capacity to excel in math, we strive to create an engaging and supportive learning environment where students not only understand mathematical concepts but also develop a true appreciation for the subject.</p>
@@ -26,7 +32,7 @@ function AboutUs() {
                 </div>
             </div>
             <div className="pages-col-6 right-about">
-                <div className="about-content-img" style={bgImageStyle}>
+                <div data-aos="fade-left" data-aos-duration="1000" className="about-content-img" style={bgImageStyle}>
                     <div className="img-shade"></div>
                 </div>
             </div>

@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 function OurMission() {
+
+    useEffect(() => {
+        Aos.init();
+    }, [])
 
     const bgImageStyle = {
         backgroundImage: `url( https://images.pexels.com/photos/7551442/pexels-photo-7551442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 )`,
@@ -9,8 +15,8 @@ function OurMission() {
     return (
         <div className="pages-row">
             <div className="pages-col-6">
-                <h1 className="about-content-title">Our Mission</h1>
-                <div className="about-content-holder">
+                <h1 data-aos="zoom-in" data-aos-duration="1500" className="about-content-title">Our Mission</h1>
+                <div className="about-content-holder" data-aos="fade-up" data-aos-duration="2500">
                     <div className="about-content">
                         <h3>Our Mission: Empowering Mathematical Excellence</h3>
                         <p>At H-CAMP, our mission is deeply rooted in the belief that mathematics is not just a subject but a key to unlocking limitless potential. We are dedicated to fostering a genuine love for mathematics and empowering students to become not only proficient in math but also confident problem solvers, critical thinkers, and lifelong learners.</p>
@@ -30,7 +36,7 @@ function OurMission() {
                 </div>
             </div>
             <div className="pages-col-6">
-                <div className="about-content-img" style={bgImageStyle}>
+                <div data-aos="fade-left" data-aos-duration="1000" className="about-content-img" style={bgImageStyle}>
                     <div className="img-shade"></div>
                 </div>
             </div>

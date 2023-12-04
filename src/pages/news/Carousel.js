@@ -3,6 +3,8 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import { db } from '../../config/firebase';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Carousel = () => {
     const [slides, setSlides] = useState([]);
@@ -50,12 +52,28 @@ const Carousel = () => {
     const goToPreviousSlide = () => {
         const newIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
         setCurrentSlideIndex(newIndex);
+        triggerAOS();
     };
 
     const goToNextSlide = () => {
         const newIndex = (currentSlideIndex + 1) % slides.length;
         setCurrentSlideIndex(newIndex);
+        triggerAOS();
     };
+
+    const triggerAOS = () => {
+        Aos.init({
+            duration: 1800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: true,
+            offset: 1000,
+        });
+    };
+
+    useEffect(() => {
+        Aos.init();
+    }, [])
 
     return (
         <div className="carousel">
@@ -77,7 +95,7 @@ const Carousel = () => {
                     </div>
                 </div>
                 <div className='pages-col-6'>
-                    <div className="carousel-slide">
+                    <div className="carousel-slide" data-aos="zoom-in slide-left" data-aos-duration="1000">
                         <div className="slide-details">
                             <h2>{currentSlide?.title}</h2>
                             <p className='event-details'>{currentSlide?.description}</p>

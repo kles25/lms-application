@@ -34,20 +34,20 @@ function Contact() {
                                     <div className="pages-col-5">
                                         <div className="contact-form">
                                             <form>
-                                                <h3 className="contact-title">Contact Us</h3>
-                                                <div className="form-input">
+                                                <h3 data-aos="zoom-in" data-aos-duration="1500" className="contact-title">Contact Us</h3>
+                                                <div data-aos="fade-up" data-aos-duration="2500" className="form-input">
                                                     <label>Full Name</label>
                                                     <input type="text" placeholder="Full Name" />
                                                 </div>
-                                                <div className="form-input">
+                                                <div data-aos="fade-up" data-aos-duration="2500" className="form-input">
                                                     <label>Email</label>
                                                     <input type="email" placeholder="Email" />
                                                 </div>
-                                                <div className="form-input">
+                                                <div data-aos="fade-up" data-aos-duration="2500" className="form-input">
                                                     <label>Message</label>
                                                     <textarea rows="5" placeholder="Your Message" />
                                                 </div>
-                                                <div className="form-input">
+                                                <div data-aos="fade-up" data-aos-duration="2500" className="form-input">
                                                     <button className="form-button">Submit</button>
                                                 </div>
 
@@ -55,7 +55,7 @@ function Contact() {
                                         </div>
                                     </div>
                                     <div className="pages-col-7">
-                                        <div className="contact-details">
+                                        <div className="contact-details" data-aos="fade-left" data-aos-duration="1500">
                                             <iframe
                                                 title="Google Maps"
                                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14092.752696068284!2d86.91467536715975!3d27.988138714539044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e854a215bd9ebd%3A0x576dcf806abbab2!2sMt%20Everest!5e0!3m2!1sen!2sph!4v1701516921145!5m2!1sen!2sph"
